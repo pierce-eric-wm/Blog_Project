@@ -20,7 +20,7 @@ if(@$post['submit']){
     $database->bind(':post', $post);
     $database->execute();
     if($database->lastInsertId()){
-        echo '<p>Post Added!</p>';
+        echo '<p style="text-align: center; background-color:grey;">Post Added!</p>';
     }
 }
 
@@ -39,21 +39,19 @@ $rows = $database->resultset();
 </head>
 
 <body>
-<div id="form">
-<h1 style="text-decoration: underline">Add Post</h1>
+<!--<div id="form">--> <div id="form">
 
+<h1 style="text-align:center">Add Post</h1>
 <form method="post" action="<?php $_SERVER['PHP_SELF']; ?>">
 
     <label>Post Title</label><br />
     <input type="text" name="title" placeholder="Add a Title..." /><br /><br />
 
     <label>Post Body</label><br />
-    <textarea name="post"></textarea><br /><br />
-    <input type="submit" name="submit" value="Submit" />
+    <textarea name="post" rows="10" cols="40"></textarea><br /><br />
+    <input type="submit" class=button name="submit" value="Submit" />
 </form>
 </div>
-
-
 <h1 id="header">My Blog</h1>
 
 <div id="main">
@@ -68,12 +66,11 @@ $rows = $database->resultset();
             echo "<p>" . $post->post . "</p>";
             echo "<span class='footer'>Posted By: " . $post->author . " Posted On: " . $post->datePosted . " Tags: " . $post->tags . "</span>";
             echo "</div>";
-            echo "<form method='post'><input type='hidden' name='delete_id' value='". $post->id ."'> <input type='submit' name='delete' value='Delete'></form>";
+            echo "<form method='post'><input type='hidden' name='delete_id' value='". $post->id ."'> <input class=button type='submit' name='delete' value='Delete'></form>";
         }
         ?>
 
     </div>
-</div>
 
 </body>
 

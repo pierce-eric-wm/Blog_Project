@@ -1,21 +1,50 @@
 #form {
     height: 400px;
-    width: 300px;
-    /*margin-top: 40px;*/
-    /*margin-left: 40px;*/
-    margin-left: auto;
-
+    width: 321px;
+    margin-left:auto;
+    background: rgba(255,255,255,0.5);
 }
 #main {
     float: left;
-    /*margin-right: auto;*/
     width: 1100px;
     margin-top: -360px;
+    background: rgba(255,255,255,0.5);
+
 }
 #header{
     float: left;
     width: 1100px;
     margin-top: -400px;
-    /*margin-right: auto;*/
     text-align: center;
+    background: rgba(255,255,255,0.5);
+
+}
+body{
+    background-color:darkblue;
+
+}
+.button{
+    border: none;
+    background-color: grey;
+    color: darkblue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+}
+/*#add{*/
+    /*float: right;*/
+    /*width: 321px;*/
+    /*background: rgba(255,255,255,0.5);*/
+    /*height:37px;*/
+/*}*/
+#PostA{
+    background: rgba(255,255,255,0.5);
+    text-align: center;
+
+}
+textarea{
+    resize: none;
+    overflow-y: scroll;
 }
